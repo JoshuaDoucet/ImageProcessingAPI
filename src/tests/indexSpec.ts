@@ -1,5 +1,17 @@
-import index from '../index';
+// indexSpec.ts
+// Jasmine tests for the index.ts source file
 
-it('expect printAndUpper("hello") to return "HELLO"', () => {
-  expect(index.printAndUpper('hello')).toBe('HELLO');
+import supertest from 'supertest';
+
+// Where app is an Express server object
+import app from'../index'; 
+
+const request = supertest(app); 
+
+describe('Test root endpoint', () => {
+    it('gets the root endpoint', async(done) => {
+        const response = await request.get('/');         
+        expect(response.status).toBe(200);         
+        done();     
+    })
 });
