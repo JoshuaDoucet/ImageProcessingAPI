@@ -1,2 +1,11 @@
 console.log('Hello');
-const name = 'Josh';
+const studentName = 'Josh';
+
+const printAndUpper = (msg: string): string => {
+  console.log(msg);
+  return msg.toUpperCase();
+};
+
+export default {
+  printAndUpper
+};

@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
+    "jasmine": "jasmine",
     "lintinit": "eslint --init",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "prettier": "prettier --config .prettierrc \"src/**/*.{js,ts}\" --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && npm run jasmine"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/JoshuaDoucet/ImageProcessingAPI#readme",
   "devDependencies": {
+    "@types/jasmine": "^3.10.3",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
     "eslint": "^7.32.0",
@@ -36,5 +38,9 @@
     "prettier": "^1.19.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "jasmine": "^3.6.4",
+    "jasmine-spec-reporter": "^7.0.0"
   }
 }
