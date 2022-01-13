@@ -4,14 +4,14 @@
 import supertest from 'supertest';
 
 // Where app is an Express server object
-import app from'../index'; 
+import app from '../index';
 
-const request = supertest(app); 
+const request = supertest(app);
 
 describe('Test root endpoint', () => {
-    it('gets the root endpoint', async(done) => {
-        const response = await request.get('/');         
-        expect(response.status).toBe(200);         
-        done();     
-    })
+  it('gets the root endpoint', async done => {
+    const response = await request.get('/');
+    expect(response.status).toBe(200);
+    done();
+  });
 });

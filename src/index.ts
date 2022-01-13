@@ -4,6 +4,9 @@
 import express from 'express';
 // get server routes
 import routes from './routes/index';
+// get resizing image module
+import imgSizer from './utilities/resizeImages';
+
 
 // Express server application object
 const app = express();
@@ -15,7 +18,7 @@ app.use('/', routes);
 
 // listen on port
 app.listen(port, () => {
-    console.log(`Server started at localhost:${port}`); 
+  console.log(`Server started at localhost:${port}`);
 });
 
 export default app;
