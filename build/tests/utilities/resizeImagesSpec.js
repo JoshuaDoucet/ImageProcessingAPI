@@ -49,7 +49,7 @@ describe('Tests resizeJpg function to see if correct boolean is returned', funct
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, resizeImages_1.default.resizeJpg("file_not_in_assets_1_2_3", 200, 200)];
+                case 0: return [4 /*yield*/, resizeImages_1.default.resizeJpg('file_not_in_assets_1_2_3', 200, 200)];
                 case 1:
                     result = _a.sent();
                     expect(result).toBe(false);
@@ -61,7 +61,7 @@ describe('Tests resizeJpg function to see if correct boolean is returned', funct
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, resizeImages_1.default.resizeJpg("icelandwaterfall", 200, 200)];
+                case 0: return [4 /*yield*/, resizeImages_1.default.resizeJpg('icelandwaterfall', 200, 200)];
                 case 1:
                     result = _a.sent();
                     expect(result).toBe(true);

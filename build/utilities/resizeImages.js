@@ -42,8 +42,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // Import module for processing images
 var sharp_1 = __importDefault(require("sharp"));
-// Creates a resized jpg at /assets/images/thumb/imgName_thumb.jpg
-// The image at /assets/images/fulll/imgName.jpg will be resized and a new files
+// Creates a resized jpg at /public/images/generated/imgName_<width>x<height>.jpg
+// The image at /public/images/original/imgName.jpg will be resized and a new files
 // will be created with the new width and height
 // returns true if resized file is successfully created
 var resizeJpg = function (imgName, width, height) { return __awaiter(void 0, void 0, void 0, function () {
@@ -52,15 +52,17 @@ var resizeJpg = function (imgName, width, height) { return __awaiter(void 0, voi
         switch (_a.label) {
             case 0:
                 success = true;
-                imgSrc = "assets/images/full/" + imgName + ".jpg";
-                imgDest = "assets/images/thumb/" + imgName + "_thumb.jpg";
+                imgSrc = "public/images/original/".concat(imgName, ".jpg");
+                imgDest = "public/images/generated/".concat(imgName, "_").concat(width, "x").concat(height, ".jpg");
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);
+                //Create new resized image at imgDest path
                 return [4 /*yield*/, (0, sharp_1.default)(imgSrc)
                         .resize(width, height)
                         .toFile(imgDest)];
             case 2:
+                //Create new resized image at imgDest path
                 _a.sent();
                 return [3 /*break*/, 4];
             case 3:

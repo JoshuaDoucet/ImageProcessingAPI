@@ -14,24 +14,10 @@ var app = (0, express_1.default)();
 var port = 3000;
 // Link routes to server
 app.use('/', index_1.default);
+// link static assets to server
+app.use(express_1.default.static('public'));
 // listen on port
 app.listen(port, function () {
     console.log("Server started at localhost:".concat(port));
 });
 exports.default = app;
-//-----------------------------------------------
-//Debug for pretty and ESLint
-/*
-console.log('Hello')
-const studentName = "Josh"
-
-//DEBUG for Jasmine test
-const printAndUpper = (msg: string): string => {
-    console.log(msg);
-    return msg.toUpperCase();
-};
-
-export default {
-    printAndUpper
-};
-*/
