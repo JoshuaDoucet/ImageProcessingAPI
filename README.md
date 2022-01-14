@@ -18,8 +18,14 @@ The scripts needed to test/start/build the application
 Any endpoints that should be accessed to test that you have created the required functionality.
 * / enpoint is a simple homepage
 * /api endpoint displays a TOC of the API tools and their paths
-* /api/images enpoint resizes and/or displays images
-
+ * /api/images enpoint resizes and/or displays images
+  * Example queries to the /api/images endpoint
+  * Example query1: localhost:3000/api/images/?jpgname=fjord&width=500&height=200
+  * Example query 2: localhost:3000/api/images/?jpgname=encenadaport&width=200&height=200
+  * Example query 3: localhost:3000/api/images/?jpgname=palmtunnel&width=10&height=10
+  * Example query 4: localhost:3000/api/images/?jpgname=santamonica&width=10&height=100
+  * Example query 5: localhost:3000/api/images/?jpgname=icelandwaterfall&width=5000&height=5000
+  * Example query 6: localhost:3000/api/images/?jpgname=icelandwaterfall
 Any other project functionality and Need-to-Know
 * public/images/original directory contains original images for resizing
 * public/images/generated directory is where resized/generated images are placed

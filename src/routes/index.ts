@@ -7,7 +7,7 @@ import apiRoutes from './api/api';
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
+routes.get('/', (req, res): void => {
   res.send('API Homepage visited. Visit path /api to see available tools.');
 });
 

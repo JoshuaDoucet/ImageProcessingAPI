@@ -37,7 +37,7 @@ const routes = express.Router();
 const apiDocStr =
   '// This route is used for the Image Resizing API <br/> The api/images API tool is used to resize and display images <br/> <br/> The API route has 3 main URL query parameters<br/>   jpgname - the filename, without an extensiono, that exists on the API server at the public/images/original dir<br/>   width - the desired width of the image specified by jpgname<br/>   height - the desired width of the image specified by jpgname<br/><br/> This endpoint will result in 1 of 4 responses<br/>   1. The API documentation when no query params are provided<br/>   2. An existing originalimage in its original size. Use jpgname param <br/>   3. A generated resized image. Use jpgname, width, and height params<br/>   4. An error message for invalid params or image requests<br/><br/> Example query1: ?jpgname=fjord&width=500&height=200<br/> Example query 2: ?jpgname=encenadaport&width=200&height=200<br/> Example query 3: ?jpgname=palmtunnel&width=10&height=10<br/> Example query 4: ?jpgname=santamonica&width=10&height=100<br/> Example query 5: ?jpgname=icelandwaterfall&width=5000&height=5000<br/> Example query 6: ?jpgname=icelandwaterfall';
 
-routes.get('/', async (req, res) => {
+routes.get('/', async (req, res): void => {
   // Flag for valid image dimmensions
   let dimsValid = true;
   // Get query params for resizing image

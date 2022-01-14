@@ -45,7 +45,7 @@ var supertest_1 = __importDefault(require("supertest"));
 // Where app is an Express server object
 var index_1 = __importDefault(require("../../../index"));
 var request = (0, supertest_1.default)(index_1.default);
-describe('Test /api/images endpoint', function () {
+describe('GET /api/images endpoint', function () {
     it('gets the /api/images endpoint', function (done) { return __awaiter(void 0, void 0, void 0, function () {
         var response;
         return __generator(this, function (_a) {
@@ -54,6 +54,34 @@ describe('Test /api/images endpoint', function () {
                 case 1:
                     response = _a.sent();
                     expect(response.status).toBe(200);
+                    done();
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    it('requests an EXISTING image file and gets a response with an image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
+        var response;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, request.get('/api/images?jpgname=fjord&width=500&height=200')];
+                case 1:
+                    response = _a.sent();
+                    expect(response.status).toBe(200);
+                    expect(response.type).toBe('image/jpeg');
+                    done();
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    it('requests an NON-EXISTING image file and gets a response with no image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
+        var response;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, request.get('/api/images?jpgname=non-existing-image&width=500&height=200')];
+                case 1:
+                    response = _a.sent();
+                    expect(response.status).toBe(200);
+                    expect(response.type).not.toBe('image/jpeg');
                     done();
                     return [2 /*return*/];
             }
