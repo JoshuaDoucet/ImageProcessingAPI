@@ -108,7 +108,6 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 if (!dimsValid) return [3 /*break*/, 6];
                 pathToFile = path_1.default.resolve("public/images/generated/".concat(jpgname, "_").concat(width, "x").concat(height, ".jpg"));
                 if (!fs_1.default.existsSync(pathToFile)) return [3 /*break*/, 3];
-                console.log('Existing File Used');
                 res.sendFile(pathToFile);
                 return [3 /*break*/, 5];
             case 3:

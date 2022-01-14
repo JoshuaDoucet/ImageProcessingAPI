@@ -59,7 +59,7 @@ describe('GET /api/images endpoint', function () {
             }
         });
     }); });
-    it('requests an EXISTING image file and gets a response with an image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
+    it('requests an EXISTING image file and gets a response type of an image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
         var response;
         return __generator(this, function (_a) {
             switch (_a.label) {
@@ -73,7 +73,7 @@ describe('GET /api/images endpoint', function () {
             }
         });
     }); });
-    it('requests an NON-EXISTING image file and gets a response with no image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
+    it('requests an NON-EXISTING image file and gets a response with type NOT of an image file', function (done) { return __awaiter(void 0, void 0, void 0, function () {
         var response;
         return __generator(this, function (_a) {
             switch (_a.label) {
