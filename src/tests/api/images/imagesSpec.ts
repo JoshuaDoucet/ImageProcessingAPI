@@ -8,7 +8,7 @@ import app from '../../../index';
 
 const request = supertest(app);
 
-describe('GET /api/images endpoint', () => {
+describe('GET /api/images endpoint', (): void => {
   it('gets the /api/images endpoint', async done => {
     const response = await request.get('/api/images');
     expect(response.status).toBe(200);

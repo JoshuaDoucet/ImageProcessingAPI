@@ -7,7 +7,7 @@ import imagesRoutes from './images/images';
 
 const routes = express.Router();
 
-routes.get('/', (req, res): void => {
+routes.get('/', (req: express.Request, res: express.Response): void => {
   res.send(
     'API Table of Contents <br/> Visit /api/images to use the image resizing API tool.'
   );

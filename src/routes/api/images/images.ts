@@ -39,7 +39,7 @@ const apiDocStr =
 
 routes.get(
   '/',
-  async (req, res): Promise<void> => {
+  async (req: express.Request, res: express.Response): Promise<void> => {
     // Flag for valid image dimmensions
     let dimsValid = true;
     // Get query params for resizing image

@@ -80,7 +80,9 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 jpgname = req.query.jpgname;
                 widthStr = req.query.width;
                 heightStr = req.query.height;
-                if (!(jpgname == undefined && widthStr == undefined && heightStr == undefined)) return [3 /*break*/, 1];
+                if (!(jpgname == undefined &&
+                    widthStr == undefined &&
+                    heightStr == undefined)) return [3 /*break*/, 1];
                 res.send(apiDocStr);
                 return [3 /*break*/, 9];
             case 1:
