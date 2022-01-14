@@ -4,6 +4,9 @@ A web API for resizing images
 Prerequisite Software
 * Node >= 12.13 (For Sharp module)
 
+To install other application dependencies run
+* npm install
+
 The scripts needed to test/start/build the application
 * To compile TS to JS run "npm run build"
 * To run server run "npm run start"

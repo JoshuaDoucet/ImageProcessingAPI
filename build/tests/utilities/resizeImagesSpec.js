@@ -45,7 +45,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // get resizing image module
 var resizeImages_1 = __importDefault(require("../../utilities/resizeImages"));
 describe('Tests resizeJpg function to see if correct boolean is returned', function () {
-    it('returns false when an imgName provided does not exist in the assets/images/full dir', function () { return __awaiter(void 0, void 0, void 0, function () {
+    it('returns false when an imgName provided does not exist in the public/images/original dir', function () { return __awaiter(void 0, void 0, void 0, function () {
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {

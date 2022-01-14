@@ -7,7 +7,7 @@
 import imgSizer from '../../utilities/resizeImages';
 
 describe('Tests resizeJpg function to see if correct boolean is returned', () => {
-  it('returns false when an imgName provided does not exist in the assets/images/full dir', async () => {
+  it('returns false when an imgName provided does not exist in the public/images/original dir', async () => {
     const result = await imgSizer.resizeJpg(
       'file_not_in_assets_1_2_3',
       200,
