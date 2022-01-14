@@ -15,6 +15,8 @@ const port = 3000;
 
 // Link routes to server
 app.use('/', routes);
+// link static assets to server
+app.use(express.static('public'));
 
 // listen on port
 app.listen(port, () => {
